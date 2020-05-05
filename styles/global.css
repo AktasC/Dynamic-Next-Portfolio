@@ -1,0 +1,93 @@
+/* Global */
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  line-height: 1.6;
+  font-size: 18px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Navbar */
+
+.nav ul li {
+  display: inline-flex;
+  list-style-type: none;
+  vertical-align: center;
+}
+
+.nav {
+  background: #333;
+  font-size: 20px;
+  justify-content: center;
+}
+
+.nav li a {
+  color: #fff;
+}
+.nav li a:hover {
+  color: #ddd;
+}
+
+.logo {
+  position: relative;
+  top: 15px;
+}
+
+@media (max-width: 768px) {
+  .main h1 {
+    top: 38% !important;
+    font-size: 50px;
+  }
+  .footer .col {
+    width: 100% !important;
+  }
+}
+
+/* Fizzbuzz*/
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.case {
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  background-color: #900c3f;
+  box-sizing: border-box;
+  padding: 5px;
+  margin: 5px;
+  color: white;
+}
+.Fizz {
+  background-color: #c70039;
+}
+.Buzz {
+  background-color: #ff5733;
+}
+.FizzBuzz {
+  background-color: #ffc30f;
+}
