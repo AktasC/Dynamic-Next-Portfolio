@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org/) project.
+This is a [Next.js](https://nextjs.org/) based project.  
+You can check out the project [here](https://githubbox.com/AktasC/Dynamic-Next-Portfolio)  
+
 
 ## Getting Started
 
