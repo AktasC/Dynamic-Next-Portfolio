@@ -66,7 +66,7 @@ img {
 
 /* Fizzbuzz*/
 
-.row {
+#fizz .row {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -90,4 +90,23 @@ img {
 }
 .FizzBuzz {
   background-color: #ffc30f;
+}
+
+/* BubbleSort */
+
+.bubbleC {
+  width: 600px;
+  height: 384px;
+  position: relative;
+  background-color: #ffc0cb;
+  margin: 0 auto;
+}
+
+.bubble {
+  width: 28px;
+  position: absolute;
+  left: auto;
+  bottom: 0;
+  background-color: #587fff;
+  transition: 0.2s all ease;
 }
