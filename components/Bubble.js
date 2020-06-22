@@ -22,10 +22,11 @@ function generateBubbles() {
     // Adding a new column/bubble in the page's container
     $("#bubble").append("<div class='bubble bubble-" + value + "'></div>");
     // Setting each of these elements to have a size according to their value
-    $(".bubble" + value)
+    $(".bubble-" + value)
       .css("height", value * 2 + "px")
       .css("transform", "translateX(" + i * 30 + "px)")
       .html(value);
+      console.log("Transform:" + i * 30);
   }
 }
 
