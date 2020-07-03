@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "bootstrap": "^4.5.0",
+    "dynamic-class-list": "^1.0.84",
     "jquery": "^3.5.1",
     "jsdom": "^16.2.2",
     "next": "9.3.6",

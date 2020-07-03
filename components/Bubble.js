@@ -26,7 +26,7 @@ function generateBubbles() {
       .css("height", value * 2 + "px")
       .css("transform", "translateX(" + i * 30 + "px)")
       .html(value);
-      console.log("Transform:" + i * 30);
+    console.log("Transform:" + i * 30);
   }
 }
 

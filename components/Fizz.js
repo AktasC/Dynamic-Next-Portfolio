@@ -1,38 +1,40 @@
-import $ from "jquery";
+import React from "react";
+import { classList } from "dynamic-class-list";
 
-function Fizz() {
-  return <div id="fizz" className="row"></div>;
+function Fizz({ theme }) {
+  const childs = fizzGen(theme);
+  return (
+    <div id="fizz" className="row">
+      {childs}
+    </div>
+  );
 }
 
-// Workaround for Window not defined
-$(document).ready(function () {
-  fizzGen();
-});
-
-// Ternary conditions are love, ternary conditions are life.
-function fizzGen(nb) {
+function fizzGen(theme, nb = 1) {
+  const reactChild = [];
   // Recruiters usually ask the candidate to perform the fizzbuzz from 1 to 100
   // But we could also choose our own minimum.
-  for (var i = !nb ? 1 : nb; i <= 100; i++) {
-    var value = "";
+  for (let i = nb; i <= 100; i++) {
+    let value = "";
     //If it's a Fizz
-    value += i % 3 == 0 ? "Fizz" : "";
+    value += i % 3 === 0 ? "Fizz" : "";
 
     // If it's a Buzz
-    value += i % 5 == 0 ? "Buzz" : "";
+    value += i % 5 === 0 ? "Buzz" : "";
 
     // If it's neither of those we'll show the actual number
-    value += value == "" ? i : "";
-
-    // Purely for styling purposes.
-    var style = value;
+    value += value === "" ? i : "";
 
     // Let's add all these divs to our "fizz" container
-    $("#fizz").append("<div class='case " + style + "'>" + value + "</div>");
-
+    reactChild.push(
+      <div key={i} className={classList(["case", value, theme])}>
+        {value}
+      </div>
+    );
     // Clear the value variable.
     value = "";
   }
+  return reactChild;
 }
 
 export default Fizz;

@@ -92,14 +92,56 @@ img {
   margin: 5px;
   color: white;
 }
+
 .Fizz {
   background-color: #c70039;
 }
+
 .Buzz {
   background-color: #ff5733;
 }
+
 .FizzBuzz {
   background-color: #ffc30f;
+}
+
+.case.Eighties {
+  background-color: #8338ec;
+}
+.Fizz.Eighties {
+  background-color: #ff006e;
+}
+.Buzz.Eighties {
+  background-color: #fb5607;
+}
+.FizzBuzz.Eighties {
+  background-color: #ffbe0b;
+}
+
+.case.Midnight {
+  background-color: #f94144;
+}
+.Fizz.Midnight {
+  background-color: #f8961e;
+}
+.Buzz.Midnight {
+  background-color: #90be6d;
+}
+.FizzBuzz.Midnight {
+  background-color: #577590;
+}
+
+.case.Oceanic {
+  background-color: #ade8f4;
+}
+.Fizz.Oceanic {
+  background-color: #48cae4;
+}
+.Buzz.Oceanic {
+  background-color: #0096c7;
+}
+.FizzBuzz.Oceanic {
+  background-color: #023e8a;
 }
 
 /* BubbleSort */
