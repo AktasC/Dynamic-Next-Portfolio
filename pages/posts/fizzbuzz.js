@@ -1,4 +1,4 @@
-import Button from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import Fizz from "../../components/Fizz";
 import Head from "next/head";
 import Layout from "../../components/Layout";
