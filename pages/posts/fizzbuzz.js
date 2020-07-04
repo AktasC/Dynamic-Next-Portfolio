@@ -25,10 +25,10 @@ function FizzBuzz() {
         <br />- <b>FizzBuzz</b> lorsque divisible par <b>3 et 5</b>.
       </p>
       <div className="cases">
-        <div className="case">N</div>
-        <div className="case Fizz">Fizz</div>
-        <div className="case Buzz">Buzz</div>
-        <div className="case FizzBuzz">FizzBuzz</div>
+        <div className={"case " + theme}>N</div>
+        <div className={"case Fizz " + theme}>Fizz</div>
+        <div className={"case Buzz " + theme}>Buzz</div>
+        <div className={"case FizzBuzz " + theme}>FizzBuzz</div>
       </div>
       <div>
         <br />
