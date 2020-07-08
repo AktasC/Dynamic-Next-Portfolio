@@ -9,11 +9,11 @@ export default function Home() {
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <h2>Bienvenue !</h2>
+        <h2>{siteTitle}</h2>
         <p>
           Dans la famille "<i>découverte de nouvelles technos</i>" je vous
           propose <b>NextJS</b> !<br />
-          Next est un framework FOSS (Open Source & Gratuit) basé sur Vue.
+          Next est un framework FOSS (Free and Open Source Software) basé sur Vue.
         </p>
         <p>
           Commencé avec le tutoriel officiel de{" "}

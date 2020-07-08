@@ -5,15 +5,6 @@ import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 export default function NavBar() {
   return (
     <Navbar className="navbar-toggleable-sm">
-      <Navbar.Brand href="/">
-        <img
-          alt=""
-          src="/favicon.ico"
-          width="30"
-          height="30"
-          className="d-inline-block align-top"
-        />{" "}
-      </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
@@ -29,19 +20,18 @@ export default function NavBar() {
         </Nav>
         <Nav>
           <NavDropdown title="Me contacter" id="basic-nav-dropdown">
+            {/* No use for a <Link> since it's not navigation based. */}
             <NavDropdown.Item href="https://github.com/aktasC" target="_blank">
               Github
             </NavDropdown.Item>
-            {/* No use for a <Link> for this one since it's not navigation based. */}
-            <NavDropdown.Item
-              href="mailto:ceb.akt@gmail.com?subject=nextjs"
-              target="_blank"
-            >
+            {/* Neither here. */}
+            <NavDropdown.Item href="mailto:ceb.akt@gmail.com" target="_blank">
               Email
             </NavDropdown.Item>
             <NavDropdown.Divider />
+            {/* Nor here. */}
             <NavDropdown.Item
-              href="https://fr.linkedin.com/in/cebrailaktas"
+              href="https://www.linkedin.com/in/cebrailaktas/"
               target="_blank"
             >
               LinkedIn
