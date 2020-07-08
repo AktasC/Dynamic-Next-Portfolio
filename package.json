@@ -1,12 +1,12 @@
 {
   "name": "nextjs-dynamic-portfolio",
-  "description": "A simple website built with Next, React, React-Boostrap & Jquery",
+  "description": "A simple website built with NextJS & React-Boostrap",
   "author": {
     "name": "AktasC",
     "email": "ceb.akt@gmail.com",
     "url": "https://github.com/AktasC/Dynamic-Next-Portfolio"
   },
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -16,7 +16,6 @@
   "dependencies": {
     "bootstrap": "^4.5.0",
     "dynamic-class-list": "^1.0.84",
-    "jquery": "^3.5.1",
     "jsdom": "^16.2.2",
     "next": "9.3.6",
     "react": "16.13.1",
