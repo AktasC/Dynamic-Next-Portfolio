@@ -1,6 +1,6 @@
-This is a [Next.js](https://nextjs.org/) based project.  
-You can check out the project [here](https://githubbox.com/AktasC/Dynamic-Next-Portfolio)  
+This project uses [Next.js](https://nextjs.org/) and is made for educational purposes only.
 
+You can check out the project live [here](https://githubbox.com/AktasC/Dynamic-Next-Portfolio)
 
 ## Getting Started
 
@@ -18,4 +18,3 @@ To learn more about Next.js, take a look at the following resources:
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-

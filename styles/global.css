@@ -67,8 +67,8 @@ img {
     width: 100% !important;
   }
   .navbar img {
-      position: relative;
-      top: 15px;
+    position: relative;
+    top: 15px;
   }
   .navbar-toggler {
     align-self: flex-end;
@@ -76,8 +76,8 @@ img {
 }
 
 /*
-** Fizzbuzz
-*/
+ * Fizzbuzz
+ */
 
 #fizz .row {
   display: flex;
@@ -159,22 +159,23 @@ img {
 }
 
 /*
-** BubbleSort
-*/
+ * BubbleSort
+ */
 
 .bubbleC {
   width: 600px;
-  height: 384px;
+  height: 400px;
   position: relative;
-  background-color: #ffc0cb;
+  background-color: #f6f6f6;
   margin: 0 auto;
+  text-align: center;
 }
 
 .bubble {
-  width: 28px;
+  width: 30px;
   position: absolute;
   left: auto;
   bottom: 0;
   background-color: #587fff;
-  transition: 0.2s all ease;
+  /* transition: 0.5s all ease; */
 }
