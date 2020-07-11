@@ -1,10 +1,11 @@
 import React from "react";
+import bubbleStyles from "./Bubble.module.css";
 
 function Bubble() {
   const childs = generateBubbles();
   return (
     /*Bubble Container*/
-    <div className="bubbleC">{childs}</div>
+    <div className={bubbleStyles.bubbleC}>{childs}</div>
   );
 }
 
@@ -18,7 +19,7 @@ function generateBubbles() {
 
     // Adding a new column/bubble in the reactChild array
     reactChild.push(
-      <div key={i} className={`bubble bubble-${value}`}>
+      <div key={i} className={`${bubbleStyles.bubble} bubble-${value}`}>
         {value}
         <style jsx>
           {`
@@ -46,15 +47,16 @@ function sortBubbles(data) {
 
   /* This is a shallow copy meaning it's a referenced copy instead of a value-based 'perfect clone'
    */
+
   // const bubbles = { ...data };
   // console.log(data === bubbles);// -> False
   // console.log(data[0] === bubbles[0]);// -> True
-  
+
   /* This is a dirty workaround normally giving a "kinda deep clone" even with nested arrays
    * But this actually gives a cyclic object value error when compiled, even when SSR is disabled
    */
+
   // const bubbles = JSON.parse(JSON.stringify(data));
-  
   // return bubbles;
 }
 

@@ -157,25 +157,3 @@ img {
 .FizzBuzz.Oceanic {
   background-color: #023e8a;
 }
-
-/*
- * BubbleSort
- */
-
-.bubbleC {
-  width: 600px;
-  height: 400px;
-  position: relative;
-  background-color: #f6f6f6;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.bubble {
-  width: 30px;
-  position: absolute;
-  left: auto;
-  bottom: 0;
-  background-color: #587fff;
-  /* transition: 0.5s all ease; */
-}
