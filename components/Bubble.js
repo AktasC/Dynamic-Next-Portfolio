@@ -3,61 +3,70 @@ import bubbleStyles from "./Bubble.module.css";
 
 function Bubble() {
   const childs = generateBubbles();
-  return (
-    /*Bubble Container*/
-    <div className={bubbleStyles.bubbleC}>{childs}</div>
-  );
+  return <div className={bubbleStyles.bubbleC}>{childs}</div>;
 }
 
-// Still a W.I.P
 function generateBubbles() {
-  const reactChild = [];
+  const reactChilds = [];
 
   for (let i = 0; i < 20; i += 1) {
     // To get a good random number : Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
     let value = Math.floor(Math.random() * (190 - 14 + 1)) + 14;
 
-    // Adding a new column/bubble in the reactChild array
-    reactChild.push(
-      <div key={i} className={`${bubbleStyles.bubble} bubble-${value}`}>
+    // Adding a new column/bubble in the reactChilds array
+    reactChilds.push(
+      <div
+        key={i}
+        className={`${bubbleStyles.bubble}`}
+        style={{
+          height: `${value * 2}px`,
+          transform: `translateX(${i * 30}px)`,
+        }}
+      >
         {value}
-        <style jsx>
-          {`
-            .bubble-${value} {
-              height: ${value * 2}px;
-              transform: translateX(${i * 30}px);
-            }
-          `}
-        </style>
       </div>
     );
   }
+  //sortBubbles(reactChilds);
 
-  //sortBubbles(reactChild);
-
-  return reactChild;
+  return reactChilds;
 }
 
-function sortBubbles(data) {
-  /* TODO
-   * data is an array of JSX elements (divs)
-   * Starting at the end of the array, we need to compare each N element with it's N-1 neighbor
-   * If N < N-1 then we need to swap these elements by swaping their 'transform' property
-   */
+/* TODO */
+// Must need to be an async function so we can animate the transform change
+function sortBubbles(bubbles) {
+  const data = bubbles;
+  // This should only be executed on the client-side
+  if (process.browser) {
+    for (let i = 0; i < data.length - 1; i += 1) {
+      for (let j = 0; j < data.length - i - 1; j += 1) {
+        let elem1 = data[j];
+        let elem2 = data[j + 1];
 
-  /* This is a shallow copy meaning it's a referenced copy instead of a value-based 'perfect clone'
-   */
+        // Values of the elements
+        let val1 = elem1.props.children;
+        let val2 = elem2.props.children;
 
-  // const bubbles = { ...data };
-  // console.log(data === bubbles);// -> False
-  // console.log(data[0] === bubbles[0]);// -> True
+        // Distinguish which ones are currently checked
+        elem1.props.style.backgroundColor = "#d500f9";
+        elem2.props.style.backgroundColor = "#d500f9";
 
-  /* This is a dirty workaround normally giving a "kinda deep clone" even with nested arrays
-   * But this actually gives a cyclic object value error when compiled, even when SSR is disabled
-   */
+        if (val1 > val2) {
+          // console.log("Swap needed: " + val1 + " and " + val2);
 
-  // const bubbles = JSON.parse(JSON.stringify(data));
-  // return bubbles;
+          let tempStyle = elem1.props.style.transform;
+
+          elem1.props.style.transform = elem2.props.style.transform;
+          elem2.props.style.transform = tempStyle;
+        }
+
+        // A setTimeout with a bubbleContainer.insertBefore might do the trick.
+        // But since this is uses nextJS it might need some workarounds...
+        // TODO
+      }
+    }
+    console.log(data);
+  }
 }
 
 export default Bubble;
